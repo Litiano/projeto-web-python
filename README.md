@@ -18,6 +18,14 @@
 
 4.1 - $ mkvirtualenv NOME_DO_AMBIENTE
 
+# Se mkvirtualenv não funcionar, tente isso:
+
+$ export WORKON_HOME=~/Envs
+
+$ mkdir -p $WORKON_HOME
+
+$ source /usr/local/bin/virtualenvwrapper.sh
+
 4.2 - $ workon NOME_DO_AMBIENTE #para acessar o ambiente
 
 5 - Instalar o Django
