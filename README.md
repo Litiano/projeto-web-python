@@ -32,6 +32,8 @@ $ source /usr/local/bin/virtualenvwrapper.sh
 
 5.1 - $ pip install django
 
+# Como o projeto já existe, clone este repositório, acesse o diretorio dele e vá para o passo 8
+
 6 - Criar o projeto
 
 6.1 - $ django-admin startproject MEU_PROJETO
