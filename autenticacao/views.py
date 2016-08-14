@@ -10,4 +10,4 @@ def login(request):
 def loginPost(request):
     senha = request.POST.get('senha', '')
     email = request.POST.get('email', '')
-    # @todo criar função para logar
+    # @todo criar funcao para logar

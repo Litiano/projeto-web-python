@@ -1,0 +1,70 @@
+{% extends 'base/layout.html' %}
+
+{% block title %}Formulário{% endblock %}
+
+{% block content %}
+<style>
+    label input{
+        float: right;
+    }
+</style>
+<div class="content">
+    <h3>Formulário</h3>
+    <form action="" method="post" class="col-md-12" id="formulario1">
+        <label class="col-md-6">
+            Nome: <input name="nome" required>
+        </label>
+        <label class="col-md-6">
+            Sobrenome: <input name="sobrenome" required>
+        </label>
+
+        <label class="col-md-6">
+            CPF: <input name="cpf" required>
+        </label>
+        <label class="col-md-6">
+            RG: <input name="rg" required>
+        </label>
+        <label class="col-md-6">
+            Nascimento: <input type="text" class="datepicker" required>
+            <!-- <input type="date"> Não utilizar input type date pois não é suportado pelo Firefox -->
+        </label>
+        <label class="col-md-6">
+            Sexo: <select name="sexo" class="col-md-6" style="float: right; width: 193px; height: 26px" required>
+            <option value=""></option>
+            <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+            <option value="Indefinido">Indefinido</option>
+        </select>
+        </label>
+        <div class="clearfix"></div>
+        <h4>Endereço:</h4>
+        <label class="col-md-6">
+            CEP: <input name="endereco[cep]" type="text" data-mask="00.000-000" minlength="10" required>
+        </label>
+        <label class="col-md-6">
+            Rua: <input name="endereco[rua]" required>
+        </label>
+        <label class="col-md-6">
+            Número: <input name="endereco[numero]" required>
+        </label>
+        <label class="col-md-6">
+            Complemento: <input name="endreco[complemento]" required>
+        </label>
+        <label class="col-md-6">
+            Bairro: <input name="endereco[bairro]" required>
+        </label>
+        <label class="col-md-6">
+            Bairro: <input name="endereco[bairro]" required>
+        </label>
+                <label class="col-md-6">
+            Bairro: <input name="endereco[bairro]" required>
+        </label>
+    </form>
+</div>
+{% endblock %}
+
+{% block beforeBodyEnd %}
+<script type="application/javascript">
+    App.FormularioController.listen();
+</script>
+{% endblock %}
