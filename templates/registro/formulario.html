@@ -7,6 +7,9 @@
     label input{
         float: right;
     }
+    label select{
+        float: right; width: 193px; height: 26px;
+    }
 </style>
 <div class="content">
     <h3>Formulário</h3>
@@ -19,7 +22,7 @@
         </label>
 
         <label class="col-md-6">
-            CPF: <input name="cpf" required>
+            CPF: <input name="cpf" id="cpf" required data-mask="000.000.000-00">
         </label>
         <label class="col-md-6">
             RG: <input name="rg" required>
@@ -29,7 +32,7 @@
             <!-- <input type="date"> Não utilizar input type date pois não é suportado pelo Firefox -->
         </label>
         <label class="col-md-6">
-            Sexo: <select name="sexo" class="col-md-6" style="float: right; width: 193px; height: 26px" required>
+            Sexo: <select name="sexo" required>
             <option value=""></option>
             <option value="Masculino">Masculino</option>
             <option value="Feminino">Feminino</option>
@@ -39,26 +42,57 @@
         <div class="clearfix"></div>
         <h4>Endereço:</h4>
         <label class="col-md-6">
-            CEP: <input name="endereco[cep]" type="text" data-mask="00.000-000" minlength="10" required>
+            CEP: <input id="cep" name="endereco[cep]" type="text" data-mask="00.000-000" minlength="10" required>
         </label>
         <label class="col-md-6">
-            Rua: <input name="endereco[rua]" required>
+            Rua: <input id="rua" name="endereco[rua]" required disabled>
         </label>
         <label class="col-md-6">
-            Número: <input name="endereco[numero]" required>
+            Número: <input id="numero" name="endereco[numero]" required disabled>
         </label>
         <label class="col-md-6">
-            Complemento: <input name="endreco[complemento]" required>
+            Complemento: <input id="complemento" name="endereco[complemento]" disabled>
         </label>
         <label class="col-md-6">
-            Bairro: <input name="endereco[bairro]" required>
+            Bairro: <input id="bairro" name="endereco[bairro]" required disabled>
         </label>
         <label class="col-md-6">
-            Bairro: <input name="endereco[bairro]" required>
+            Cidade: <input id="cidade" name="endereco[cidade]" required disabled>
         </label>
                 <label class="col-md-6">
-            Bairro: <input name="endereco[bairro]" required>
+            Estado: <select id="estado" name="endereco[estado]" required disabled>
+                    	<option value=""></option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espirito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                </select>
         </label>
+        <div class="clearfix"></div>
+        <button type="submit" class="btn btn-success">Salvar!</button>
     </form>
 </div>
 {% endblock %}
