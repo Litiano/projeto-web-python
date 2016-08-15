@@ -34,7 +34,7 @@ App.FormularioController = {
         $.getJSON(url, {}, function (result) {
             if (result.erro == true) {
                 alert("Erro ao buscar CEP! Verifique o CEP informado!");
-                $('[name^="endereco[cep]"]').removeAttr('disabled');
+                $('[name^=cep]').removeAttr('disabled');
                 return false;
             }
             $('#rua').val(result.logradouro);
@@ -42,7 +42,7 @@ App.FormularioController = {
             $('#complemento').val(result.complemento);
             $('#cidade').val(result.localidade);
             $('#estado').val(result.uf);
-            $('[name^=endereco]').removeAttr('disabled');
+            $('.endereco').removeAttr('disabled');
             $('#numero').focus();
         })
     },
@@ -53,7 +53,7 @@ App.FormularioController = {
         $('#complemento').val('');
         $('#cidade').val('');
         $('#estado').val('');
-        $('[name^=endereco]').attr('disabled');
+        $('.endereco').attr('disabled');
     },
     sleep: function (milliseconds) {
         var start = new Date().getTime();

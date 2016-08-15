@@ -13,7 +13,8 @@
 </style>
 <div class="content">
     <h3>Formulário</h3>
-    <form action="" method="post" class="col-md-12" id="formulario1">
+    <form action="/registro/cadastroPost" method="post" class="col-md-12" id="formulario1">
+        {% csrf_token %}
         <label class="col-md-6">
             Nome: <input name="nome" required>
         </label>
@@ -28,7 +29,7 @@
             RG: <input name="rg" required>
         </label>
         <label class="col-md-6">
-            Nascimento: <input type="text" class="datepicker" required>
+            Nascimento: <input type="text" name="nascimento" class="datepicker" required>
             <!-- <input type="date"> Não utilizar input type date pois não é suportado pelo Firefox -->
         </label>
         <label class="col-md-6">
@@ -39,28 +40,34 @@
             <option value="Indefinido">Indefinido</option>
         </select>
         </label>
+                <label class="col-md-6">
+            Telefone: <input name="telefone" required data-mask="(00) 00000-0000">
+        </label>
+                <label class="col-md-6">
+            Celular: <input name="celular" required data-mask="(00) 00000-0000">
+        </label>
         <div class="clearfix"></div>
         <h4>Endereço:</h4>
         <label class="col-md-6">
-            CEP: <input id="cep" name="endereco[cep]" type="text" data-mask="00.000-000" minlength="10" required>
+            CEP: <input id="cep" class="endereco" name="cep" type="text" data-mask="00.000-000" minlength="10" required>
         </label>
         <label class="col-md-6">
-            Rua: <input id="rua" name="endereco[rua]" required disabled>
+            Rua: <input class="endereco" id="rua" name="rua" required disabled>
         </label>
         <label class="col-md-6">
-            Número: <input id="numero" name="endereco[numero]" required disabled>
+            Número: <input class="endereco" id="numero" name="numero" required disabled>
         </label>
         <label class="col-md-6">
-            Complemento: <input id="complemento" name="endereco[complemento]" disabled>
+            Complemento: <input class="endereco" id="complemento" name="complemento" disabled>
         </label>
         <label class="col-md-6">
-            Bairro: <input id="bairro" name="endereco[bairro]" required disabled>
+            Bairro: <input class="endereco" id="bairro" name="bairro" required disabled>
         </label>
         <label class="col-md-6">
-            Cidade: <input id="cidade" name="endereco[cidade]" required disabled>
+            Cidade: <input class="endereco" id="cidade" name="cidade" required disabled>
         </label>
                 <label class="col-md-6">
-            Estado: <select id="estado" name="endereco[estado]" required disabled>
+            Estado: <select class="endereco" id="estado" name="estado" required disabled>
                     	<option value=""></option>
                         <option value="AC">Acre</option>
                         <option value="AL">Alagoas</option>
