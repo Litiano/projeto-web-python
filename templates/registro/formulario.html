@@ -13,61 +13,61 @@
 </style>
 <div class="content">
     <h3>Formulário</h3>
-    <form action="/registro/cadastroPost" method="post" class="col-md-12" id="formulario1">
+    <form action="{%url 'formularioPost' %}" method="post" class="col-md-12" id="formulario1">
         {% csrf_token %}
+        <input type="hidden" name="id" value="{{ item.id }}">
         <label class="col-md-6">
-            Nome: <input name="nome" required>
+            Nome: <input name="nome" required value="{{ item.nome }}">
         </label>
         <label class="col-md-6">
-            Sobrenome: <input name="sobrenome" required>
+            Sobrenome: <input name="sobrenome" required value="{{ item.sobrenome }}">
         </label>
 
         <label class="col-md-6">
-            CPF: <input name="cpf" id="cpf" required data-mask="000.000.000-00">
+            CPF: <input name="cpf" id="cpf" required data-mask="000.000.000-00" value="{{ item.cpf }}">
         </label>
         <label class="col-md-6">
-            RG: <input name="rg" required>
+            RG: <input name="rg" required value="{{ item.rg }}">
         </label>
         <label class="col-md-6">
-            Nascimento: <input type="text" name="nascimento" class="datepicker" required>
+            Nascimento: <input type="text" name="nascimento" class="datepicker" required value="{{ item.nascimento|date:"d/m/Y" }}">
             <!-- <input type="date"> Não utilizar input type date pois não é suportado pelo Firefox -->
         </label>
         <label class="col-md-6">
-            Sexo: <select name="sexo" required>
+            Sexo: <select name="sexo" required id="sexo">
             <option value=""></option>
             <option value="Masculino">Masculino</option>
             <option value="Feminino">Feminino</option>
-            <option value="Indefinido">Indefinido</option>
         </select>
         </label>
                 <label class="col-md-6">
-            Telefone: <input name="telefone" required data-mask="(00) 00000-0000">
+            Telefone: <input name="telefone" required data-mask="(00) 00000-0000" value="{{ item.telefone }}">
         </label>
                 <label class="col-md-6">
-            Celular: <input name="celular" required data-mask="(00) 00000-0000">
+            Celular: <input name="celular" required data-mask="(00) 00000-0000" value="{{ item.celular }}">
         </label>
         <div class="clearfix"></div>
         <h4>Endereço:</h4>
         <label class="col-md-6">
-            CEP: <input id="cep" class="endereco" name="cep" type="text" data-mask="00.000-000" minlength="10" required>
+            CEP: <input id="cep" class="endereco" name="cep" type="text" data-mask="00.000-000" minlength="10" required value="{{ item.cep }}">
         </label>
         <label class="col-md-6">
-            Rua: <input class="endereco" id="rua" name="rua" required disabled>
+            Rua: <input class="endereco" id="rua" name="rua" required value="{{ item.rua }}">
         </label>
         <label class="col-md-6">
-            Número: <input class="endereco" id="numero" name="numero" required disabled>
+            Número: <input class="endereco" id="numero" name="numero" required value="{{ item.numero }}">
         </label>
         <label class="col-md-6">
-            Complemento: <input class="endereco" id="complemento" name="complemento" disabled>
+            Complemento: <input class="endereco" id="complemento" name="complemento" value="{{ item.complemento }}">
         </label>
         <label class="col-md-6">
-            Bairro: <input class="endereco" id="bairro" name="bairro" required disabled>
+            Bairro: <input class="endereco" id="bairro" name="bairro" required value="{{ item.bairro }}">
         </label>
         <label class="col-md-6">
-            Cidade: <input class="endereco" id="cidade" name="cidade" required disabled>
+            Cidade: <input class="endereco" id="cidade" name="cidade" required value="{{ item.cidade }}">
         </label>
                 <label class="col-md-6">
-            Estado: <select class="endereco" id="estado" name="estado" required disabled>
+            Estado: <select class="endereco" id="estado" name="estado" required>
                     	<option value=""></option>
                         <option value="AC">Acre</option>
                         <option value="AL">Alagoas</option>
@@ -107,5 +107,7 @@
 {% block beforeBodyEnd %}
 <script type="application/javascript">
     App.FormularioController.listen();
+$('#estado').val('{{ item.estado }}');
+$('#sexo').val('{{ item.sexo }}');
 </script>
 {% endblock %}

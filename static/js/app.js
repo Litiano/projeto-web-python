@@ -63,7 +63,7 @@ App.FormularioController = {
             }
         }
     },
-        validaCPF: function (strCPF) {
+    validaCPF: function (strCPF) {
         strCPF = strCPF.replace(/[^0-9]/g,''); // Remove o que não for numero.
         var Soma;
         var Resto;

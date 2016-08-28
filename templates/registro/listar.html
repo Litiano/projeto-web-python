@@ -1,0 +1,30 @@
+{% extends 'base/layout.html' %}
+
+{% block title %}Cadastros{% endblock %}
+
+{% block content %}
+<table class="table table-bordered table-responsive">
+<thead>
+<tr>
+    <td>Id</td>
+    <td>Nome</td>
+    <td>etc</td>
+    <td>Ação</td>
+</tr>
+</thead>
+<tbody>
+    {% for item in itens %}
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.nome }}</td>
+            <td>{{ item.nome }}</td>
+            <td>
+                <a href="{% url 'editar' item.id %}"><button class="btn btn-success">Editar</button></a>
+                <a href="{% url 'excluir' item.id %}" onclick="return confirm('Deseja Excluir?')"><button class="btn btn-danger">Excluir!</button></a>
+            </td>
+        </tr>
+    {% endfor %}
+</tbody>
+</table>
+
+{% endblock %}
