@@ -8,7 +8,7 @@
 <tr>
     <td>Id</td>
     <td>Nome</td>
-    <td>etc</td>
+    <td>Email</td>
     <td>Ação</td>
 </tr>
 </thead>
@@ -17,7 +17,7 @@
         <tr>
             <td>{{ item.id }}</td>
             <td>{{ item.nome }}</td>
-            <td>{{ item.nome }}</td>
+            <td>{{ item.email}}</td>
             <td>
                 <a href="{% url 'editar' item.id %}"><button class="btn btn-success">Editar</button></a>
                 <a href="{% url 'excluir' item.id %}" onclick="return confirm('Deseja Excluir?')"><button class="btn btn-danger">Excluir!</button></a>

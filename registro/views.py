@@ -23,7 +23,8 @@ def formularioPost(request):
         form = Formulario.objects.get(pk=id)
     else:
         form = Formulario()
-
+    form.email = post.get('email', '')
+    form.senha = post.get('senha', '')
     form.nome = post.get('nome', '')
     form.sobrenome = post.get('sobrenome', '')
     form.cpf = post.get('cpf', '')

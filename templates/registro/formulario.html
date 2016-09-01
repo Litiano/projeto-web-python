@@ -17,6 +17,12 @@
         {% csrf_token %}
         <input type="hidden" name="id" value="{{ item.id }}">
         <label class="col-md-6">
+            Email: <input name="email" required  value="{{ item.email }}">
+        </label>
+        <label class="col-md-6">
+            Senha: <input name="senha" type="password" required value="{{ item.senha }}">
+        </label>
+        <label class="col-md-6">
             Nome: <input name="nome" required value="{{ item.nome }}">
         </label>
         <label class="col-md-6">
@@ -30,7 +36,8 @@
             RG: <input name="rg" required value="{{ item.rg }}">
         </label>
         <label class="col-md-6">
-            Nascimento: <input type="text" name="nascimento" class="datepicker" required value="{{ item.nascimento|date:"d/m/Y" }}">
+            Nascimento: <input type="text" name="nascimento" class="datepicker"
+            required value="{{ item.nascimento|date:"d/m/Y" }}">
             <!-- <input type="date"> Não utilizar input type date pois não é suportado pelo Firefox -->
         </label>
         <label class="col-md-6">

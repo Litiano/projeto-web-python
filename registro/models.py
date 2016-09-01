@@ -5,6 +5,8 @@ from django.forms import ModelForm
 
 
 class Formulario(models.Model):
+    email = models.CharField(max_length=255)
+    senha = models.CharField(max_length=255)
     nome = models.CharField(max_length=255)
     sobrenome = models.CharField(max_length=255)
     cpf = models.CharField(max_length=255)
@@ -25,5 +27,5 @@ class Formulario(models.Model):
 class FormularioForm(ModelForm):
     class Meta:
         model = Formulario
-        fields = ['nome', 'sobrenome', 'cpf', 'rg', 'nascimento', 'sexo', 'telefone', 'celular', 'cep', 'rua', 'numero', 'complemento'
+        fields = ['email','senha','nome', 'sobrenome', 'cpf', 'rg', 'nascimento', 'sexo', 'telefone', 'celular', 'cep', 'rua', 'numero', 'complemento'
                   , 'bairro', 'cidade', 'estado']
