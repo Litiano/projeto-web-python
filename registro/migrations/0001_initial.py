@@ -14,8 +14,8 @@ class Migration(migrations.Migration):
             name='Formulario',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('email', models.CharField(max_length=255)),
-                ('senha', models.CharField(max_length=255)),
+                ('username', models.CharField(max_length=255)),
+                ('password', models.CharField(max_length=255)),
                 ('nome', models.CharField(max_length=255)),
                 ('sobrenome', models.CharField(max_length=255)),
                 ('cpf', models.CharField(max_length=255)),

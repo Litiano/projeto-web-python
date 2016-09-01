@@ -3,6 +3,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from registro.models import Formulario
+from django.contrib.auth.decorators import login_required
 
 
 def formulario(request):
@@ -15,6 +16,7 @@ def editar(request, id):
         'id': id,
     }
     return render(request, 'registro/formulario.html', context=context)
+
 
 def formularioPost(request):
     post = request.POST
@@ -50,6 +52,7 @@ def listar(request):
         'itens': itens,
     }
     return render(request, 'registro/listar.html', context=context)
+
 
 def excluir(request, id):
     Formulario.objects.get(pk=id).delete()
