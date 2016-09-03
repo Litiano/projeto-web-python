@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Laboratório Web</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+			<section>
+					<h1>Python - Web</h1>
+					<img id="logo" src="img/python.png" alt="" width="112" height="112" />
+					<img id="ufba"src="img/ufba.png" alt="" / width="90" height="130">
+					<h4>integrantes</h4>
+					<small>
+						<p id="integrantes">Diego Raian</p>
+						<p id="integrantes">Eslei Elioterio</p>
+						<p id="integrantes">Igor Paim</p>
+						<p id="integrantes">Litiano Moura</p>
+						<p id="integrantes">Luan Menezes</p>
+						<p id="integrantes">Marcus Freire</p>
+						<p id="integrantes">Thiago de Oliveira</p>
+						</small>
+			</section>
+			<section>
+					<h1>Roteiro</h1>
+					<ul align="left">
+						<li>Histórico</li>
+						<li>Empresas conhecidas que utilizam</li>
+						<li>Linguagem</li>
+						<li>Frameworks</li>
+						<li>Montagem do ambiente de desenvolvimento</li>
+						<li>Desenvolvimento de um projeto</li>
+						<li>Bibliografia</li>
+					</ul>
+			</section>
+			<section>
+					<section>
+						<img id="logo" src="img/guido.jpg" alt="" width="200" height="200" />
+						<h1 id="historia">A História do Python</h1>
+							<ul>
+								<li><p>A Linguagem Python foi concebida no fim dos anos 80</p></li>
+										<p id="comentario">
+										    "Percebi que o desenvolvimento de utilitários para administração de sistema em C (do Amoeba)
+												estava tomando muito tempo. Além disso, fazê-los em shell Bourne não funcionaria por diversas razões.
+												 O motivo mais importante foi que, sendo um sistema distribuído de microkernel com um design novo e radical,
+												 as operações primitivas do Amoeba eram diferiam muito (além de serem mais refinadas) das operações primitivas
+												 disponíveis no shell Bourne. Portanto, havia necessidade de uma linguagem que "preencheria o vazio entre C e o
+												 shell". Por um tempo longo, esse foi o principal objetivo do Python."
+
+										    —Guido Van Rossum		
+										</p>
+							</ul>
+					</section>
+					<section data-markdown>
+
+					  HOW TO RETURN words document:
+						 PUT {} IN collection
+						 FOR line IN document:
+						 	FOR word IN split line:
+						 		IF word not.in collection:
+								INSERT word IN collection
+						 RETURN collection
+
+
+					</section>
+					<section>
+						<img id="logo" src="img/guido.jpg" alt="" width="200" height="200" />
+						<h1 id="historia">A História do Python</h1>
+							<ul>
+								<li><p>A Linguagem Python foi concebida no fim dos anos 80.</p></li>
+									<li><p>1989 o desenvolvimento do Python realmente teve início.</p></li>
+							</ul>
+
+
+					</section>
+					<section>
+					<h1 id="nome">O nome Python</h1>
+							<img id="circus" src="img/circus.jpg" alt="" width="400" height="400" />
+							<legend id="python-legend">	Monty Python's Flying Circus</legend>
+							<img id="book" src="img/book.jpg" alt="" width="376" height="500" />
+					</section>
+			</section>
+			<!-- Inicio Slide Empresas conhecidas que utilizam -->
+			<section>
+				<section>
+					<h1>Empresas conhecidas que utilizam</h1>
+				</section>	
+					<section>
+					
+							<img id="empresas1" src="img/petrobras.png" alt="" width="270" height="270" />
+							<img id = "empresas2" src= "img/bovespa.jpg" alt="" width="270" height = "270" />
+							<img id="empresas3" src="img/varig.jpeg" alt="" width="270" height="270" />
+							<img id="empresas2" src="img/jusbrasil.jpeg" alt="" width="400" height="270" />
+
+					</section>
+
+			</section>
+			<!-- Inicio Slide Linguagem -->
+			<section>
+				<section>
+					<h1>Linguagem</h1>
+					<h2 id="linguagem">Informações Técnicas</h2>
+							<ul>
+								<li><p>Possui estruturas de dados de alto nível eficientes.</p></li>
+								<li><p>Abordagem simples e efetiva.</p></li>
+								<li><p>Programação orientada a objetos.</p></li>
+								<li><p>É ideal para script e para o desenvolvimento rápido de aplicações em diversas áreas e na maioria das plataformas.</p></li>
+							</ul>
+				</section>
+				<section data-markdown>							
+								Exemplos:
+								for x in range(0, 3):
+   									print "We're on time %d" % (x)
+								while True:
+									print "To infinity and beyond! We're getting close, on %d now!" % (x)
+									x += 1
+								
+								
+				</section>
+				<section data-markdown>
+					<h2 id="linguagem">Estruturas</h2>
+							
+								Exemplo de Programação Orientada a Objetos :
+								class Complex(object):
+									def __init__(self, real, imag):
+									    self._real = real
+								        self._imag = imag
+
+
+								
+								
+				</section>
+				<section>
+					<h2 id="linguagem">Ambiente de Desenvolvimento</h2>
+							<ul>
+								<li><p>IEP (Interactive Editor for Python)</p></li>
+								<li><p>Pycharm</p></li>
+								<li><p>Geany</p></li>
+								<li><p>IronPython Studio</p></li>
+								<li><p>PyDev (Eclipse)</p></li>
+							</ul>
+				</section>
+			</section>
+
+			<!-- Inicio Slide Frameworks -->
+			<section>
+					<section>
+					<h1>Frameworks</h1>
+					</section>
+					<section>
+						<ul align="left">
+							<li><p>
+								Frameworks existem para salvá-lo de ter que reinventar a roda e ajudam a aliviar a sobrecarga quando você está construindo um novo site.
+							</p></li>
+							<li><p>
+								Existem dois tipos de framework para pyhthon.
+							</p></li>
+					</section>
+					<section>
+						<h1>Fullstack</h1>
+							<img  src="img/django.png" alt="" width="300" height="200" class="fragment"/>
+							<img  src="img/web2py.png" alt="" width="300" height="200" class="fragment"/>
+							<img  src="img/turbogears.png" alt="" width="300" height="200" class="fragment"/>
+					</section>
+					<section>
+						<h1>Microframework</h1>
+							<img  src="img/bottle.png" alt="" width="300" height="200" class="fragment"/>
+							<img  src="img/flask.png" alt="" width="300" height="200" class="fragment"/>
+							<img  src="img/pyramid.jpg" alt="" width="300" height="200" class="fragment"/>
+					</section>
+					<section>
+						<h3>O framework escolhido foi o Django</h3>
+							<div class="fragment">
+								<h4 >mas não esse Django...</h4>
+								<img  src="img/django2.jpg" alt="" width="400" height="400"/>
+							</div>
+					</section>
+					<section>
+						<h3>O framework escolhido foi o Django</h3>
+						<h4>E sim esse Django...</h4>
+						<img  src="img/django3.png" alt="" width="400" height="400"/>
+					</section>
+					<section>
+						<h1> Arquitetura Django</h1>
+					</section>
+					<section>
+								<img  src="img/arquitetura.jpg" alt="" width="400" height="400"/>
+					</section>
+					<section>
+							<h1> The Project Structure </h1>
+							<ul>
+								<li>Root</li>
+								<li>Settings.py</li>
+								<li>sqlite3</li>
+								<li>url.py</li>
+								<li>model.py</li>
+								<li>view.py</li>
+								<li>inner folders</li>
+								<li>__init__.py</li>
+							</ul>
+					</section>
+					<section>
+						<h1> Settings </h1>
+						<p>Apresenta todas as configurações mais importantes do projeto, ao criar o projeto django através do “django-admin” é criado um arquivo de configuração padrão do projeto:</p>
+							<ul align="left">
+								<li>Allowed Hosts</li>
+								<li>TIME_ZONE</li>
+								<li>DATABASES</li>
+								<li>TEMPLATE</li>
+							</ul>
+							<ul align = "right">	
+								<li>INSTALLED_APPS</li>
+								<li>ROOT_URLCONF</li>
+								<li>STATIC_URL</li>
+								<li>STATICFILES_DIRS</li>
+							</ul>
+					</section>
+					<section>
+								<h1> What's Models </h1>
+						<p>O model, concentra todas as informações de dados,manipulação do comportamento dos campos que estão sendo salvos e regras de negócio, camada responsável também por concentrar as informações de ORM.</p>
+
+					</section>
+					<section>
+								<h1> ORM </h1>
+						<p>from django.db import models
+							class Person(models.Model):
+							    first_name = models.CharField(max_length=30)
+							    last_name = models.CharField(max_length=30)
+							-------------------------------------------------------------------------
+							CREATE TABLE myapp_person (
+							    "id" serial NOT NULL PRIMARY KEY,
+							    "first_name" varchar(30) NOT NULL,
+							    "last_name" varchar(30) NOT NULL
+								);</p>
+
+					</section>
+					<section>
+								<h1> Fields </h1>
+						<p>class Musician(models.Model):
+						    first_name = models.CharField(max_length=50)
+						    last_name = models.CharField(max_length=50)
+						    instrument = models.CharField(max_length=100)</p>
+						<p>    
+						class Album(models.Model):
+						    artist = models.ForeignKey(Musician, on_delete=models.CASCADE)
+						    name = models.CharField(max_length=100)
+						    release_date = models.DateField()
+						    num_stars = models.IntegerField()
+						</p>
+
+					</section>
+					<section>
+								<h1> Exemplos </h1>
+					</section>
+					<section>
+						<h3>Example views.py:</h3>
+						    <p align="left" font size = "5px">from django.http import HttpResponse<br> from django.views import View<br>class MyView(View):<br> def get(self, request, *args, **kwargs): <br>return HttpResponse('Hello, World!')
+    						</p>
+					</section>
+					<section>
+						<h3>Example urls.py:</h3>
+						<p align ="left">  
+						from django.conf.urls import url<br>from myapp.views import MyView<br>urlpatterns = [<br>url(r'^mine/$', MyView.as_view(), name='my-view'),<br>]
+						</p>
+					</section>
+					<section>
+						<h1> Templates </h1>
+							<ul align="left">
+								<li>{{ VARIÁVEIS }}</li>
+								<li>{% TAGS %}</li>
+								<li>{{FILTROS | XXX }}</li>
+								<li>{ #COMENTÁRIOS #}</li>
+								<li>HERANÇA
+									<ul>
+										<li>{% block title %} {% endblock %}</li>
+										<li>{% extends “layout.html” %}</li>
+									</ul>
+								</li>
+							</ul>
+					</section>
+			</section>
+			<!-- Inicio Slide Montagem do ambiente de desenvolvimento -->
+			<section>
+				<section>
+					<h1>Montagem do ambiente de desenvolvimento</h1>
+				</section>
+				<section>
+						<h3>Instruções para configurar o ambiente com Python e Django </h3>
+
+							<ol>
+								<li>Instalar o Python - https://www.python.org/downloads/</li>
+								<li>Instalar o PIP - https://pip.pypa.io/en/stable/installing/
+									<ul>
+										<li>
+											Download do PIP https://bootstrap.pypa.io/get-pip.py
+										</li>
+										<li>
+											$ python get-pip.py
+										</li>	
+									</ul>
+								</li>
+								<li>Instalar o VirtualEnv
+									<ul>
+										<li>
+											$ pip install virtualenvwrapper (para windows utilize virtualenvwrapper-win)
+										</li>	
+									</ul>
+								</li>
+								<li>Criar o ambiente virtual
+									<ul>
+										<li>
+											$ mkvirtualenv NOME_DO_AMBIENTE
+										</li>
+									</ul>
+								</li>	
+
+							</ol>
+						
+				</section>	
+				<section>
+					<h3>Se mkvirtualenv não funcionar, tente isso: </h3>
+
+							<ol>
+								<li>$ export WORKON_HOME=~/Envs</li>
+								<li>$ mkdir -p $WORKON_HOME</li>
+								<li>source /usr/local/bin/virtualenvwrapper.sh</li>
+								<li>$ workon NOME_DO_AMBIENTE #para acessar o ambiente</li>
+								<li> Instalar o Django
+									<ul>
+										<li>
+											$ pip install django
+										</li>
+									</ul>
+								</li>	
+
+							</ol>
+	
+
+				</section>
+			</section>
+			<!-- Inicio Slide Desenvolvimento de um programa -->
+			<section>
+					<h1>Desenvolvimento de um programa</h1>
+					
+			</section>
+			<!-- Inicio Slide Bibliografia -->
+			<section>
+					<h1>Bibliografia</h1>
+					<ul>
+						<small>
+							<li><p>http://aprenda-python.blogspot.com.br/2016/02/qual-a-diferenca-entre-framework-fullstack-e-micro.html</p></li>
+							<li><p>https://pt.wikipedia.org/wiki/Python#Indenta.C3.A7.C3.A3o</p></li>
+							<li><p>http://pythonclub.com.br/introducao-classes-metodos-python-basico.html</p></li>
+							<li><p>http://pyscience-brasil.wikidot.com/python:python-oq-e-pq</p></li>
+							<li><p>http://wiki.python.org.br/ProgramacaoOrientadaObjetoPython#A3._Nomes</p></li>
+							<li><p>https://wiki.python.org/moin/WebFrameworks</p></li>
+							<li><p>https://www.djangoproject.com</p></li>
+							<li><p>http://www.djangobrasil.org/ </p></li>
+							<li><p>http://flask.pocoo.org/</p></li>
+							<li><p>http://tutorial.djangogirls.org/pt/django/</p></li>
+						</small>
+					</ul>
+					
+			</section>
+			<!-- Inicio Slide Fim -->
+			<section>
+					<h1>Obrigado!</h1>
+					
+			</section>
+
+
+				
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

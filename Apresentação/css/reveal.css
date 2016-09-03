@@ -1323,3 +1323,63 @@ body {
 
 .zoomed .reveal .roll span:after {
   visibility: hidden; }
+#integrantes{
+  font-size: 20px;
+}
+#logo{
+  float: left;
+  z-index: 9999999999;
+  margin-left: -573px;
+  position: absolute;
+  margin-top: -185px;
+}
+#ufba{
+  position: absolute;
+  float: right;
+  margin-top: -185px;
+right: -68px;
+}
+#historia{
+  margin-top: -185px;
+}
+#comentario{
+  font-size: 19px;
+  font-style: italic;
+}
+#historia-m{
+  font-size: 30px;
+}
+#circus{
+  float: left;
+  /*position: absolute;*/
+  left: 15px;
+
+}
+#book{
+  float: right;;
+  /*position: absolute;*/
+  left: -15px;
+}
+#empresas1{
+  float: left;;
+  /*position: absolute;*/
+  left: -15px;
+}
+#empresas2{
+  float: center;;
+  /*position: absolute;*/
+  left: -15px;
+}
+#empresas3{
+  float: right;;
+  /*position: absolute;*/
+  left: -15px;
+}
+#python-legend{
+  float: left;
+
+  top: 43px;
+  margin-top: 551px;
+  position: absolute;
+  margin-left: -15px;
+}
